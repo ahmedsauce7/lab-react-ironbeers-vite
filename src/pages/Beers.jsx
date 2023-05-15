@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import Navbar from '../components/Navbar'
 
 function Beers() {
     const [beers, setBeers] = useState([])
@@ -21,18 +22,22 @@ useEffect(() => {
 },[])
   return (
     <div>
+         <Navbar/>
+         <div className='allbeers'>
         <h1>Beers</h1>
-        <ul>
+        <ul className="beer-list">
             {beers.map((beer) =>(
-                <li key={beer._id}>
+                <Link to={`/beers/${beer._id}`}>
+                <li key={beer._id} className="beer-item">
                 <img className='beersimg' src={beer.image_url} alt={beer.name} />
                 <h3>{beer.name}</h3>
                 <h3>{beer.tagline}</h3>
                 <h3>Contributed by:{beer.contributed_by}</h3>
-                <Link to={`/beers/${beer._id}`}>View Detials</Link>
             </li>
+            </Link>
             ))}
         </ul>
+    </div>
     </div>
   )
 }

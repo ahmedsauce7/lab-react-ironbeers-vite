@@ -1,46 +1,87 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+
+body {
+  display: flex;
+  justify-content: space-evenly;
+  color: rgb(69, 68, 68);
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+a {
+  text-decoration: none;
+  color: black;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.navbar.bg-primary {
+  background-color: rgb(118, 211, 242);
 }
 
-.card {
-  padding: 2em;
+.homelogo{
+  width: 50px;
 }
 
-.read-the-docs {
-  color: #888;
+/* home page css*/
+.hometext{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.homebundle{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 20px;
+}
+
+.homeimgs{
+  width: 1200px;
 }
 
 .beersimg{
   width: 100px;
 }
+
+/*beers css*/
+
+.allbeers{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+margin: 30px;
+}
+
+.beer-list{
+  display: grid;
+ grid-template-columns: repeat(5,5fr);
+ border: 10px;
+}
+
+.beer-item{
+  margin: 10px;
+  border: 10px;
+  padding: 10px;
+}
+
+/*random beer*/
+.randombeer{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
